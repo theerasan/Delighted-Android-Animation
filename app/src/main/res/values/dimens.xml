@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gap_tiny">2dp</dimen>
+    <dimen name="gap_small">2dp</dimen>
+    <dimen name="gap_medium">4dp</dimen>
+    <dimen name="gap_large">8dp</dimen>
+    <dimen name="gap_xlarge">16dp</dimen>
+    <dimen name="gap_xxlarge">32dp</dimen>
+    <dimen name="step_size">16sp</dimen>
+    <dimen name="title_size">24sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

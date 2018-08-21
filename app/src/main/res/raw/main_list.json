@@ -1,0 +1,27 @@
+[
+  {
+    "step": "Step - 01",
+    "title": "Normal list with in RecyclerView",
+    "image": "mobile_conf_001"
+  },
+  {
+    "step": "Step - 02",
+    "title": "Animate item in RecyclerView",
+    "image": "mobile_conf_002"
+  },
+  {
+    "step": "Step - 03",
+    "title": "Transit item to Banner",
+    "image": "mobile_conf_003"
+  },
+  {
+    "step": "Step - 04",
+    "title": "Bouncing effect",
+    "image": "mobile_conf_004"
+  },
+  {
+    "step": "Step - 05",
+    "title": "Final KT Bouncing effect",
+    "image": "mobile_conf_005"
+  }
+]
