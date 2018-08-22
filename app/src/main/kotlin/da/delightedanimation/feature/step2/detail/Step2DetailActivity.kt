@@ -6,7 +6,7 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import da.delightedanimation.R
-import da.delightedanimation.databinding.ActivityStep1DetailBinding
+import da.delightedanimation.databinding.ActivityStep2DetailBinding
 import da.delightedanimation.feature.cat.CatItem
 
 class Step2DetailActivity : AppCompatActivity() {
@@ -23,7 +23,7 @@ class Step2DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = DataBindingUtil.setContentView<ActivityStep1DetailBinding>(this, R.layout.activity_step_1_detail)
+        val binding = DataBindingUtil.setContentView<ActivityStep2DetailBinding>(this, R.layout.activity_step_2_detail)
         val catItem = intent.extras.get(CAT_EXTRA) as CatItem
         binding.item = catItem
         with(this) {
