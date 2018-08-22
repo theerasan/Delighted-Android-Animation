@@ -1,19 +1,19 @@
-package da.delightedanimation.feature.step1.list
+package da.delightedanimation.feature.step2.list
 
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.dgreenhalgh.android.simpleitemdecoration.linear.EndOffsetItemDecoration
 import com.dgreenhalgh.android.simpleitemdecoration.linear.StartOffsetItemDecoration
 import da.delightedanimation.R
-import da.delightedanimation.databinding.ActivityStep1Binding
+import da.delightedanimation.databinding.ActivityStep2Binding
 import da.delightedanimation.feature.cat.CatAdapter
 import da.delightedanimation.feature.cat.CatItem
 
-interface Step1ListView {
+interface Step2ListView {
     fun setItems(items: List<CatItem>?)
 }
 
-class Step1ListViewImpl(activity: AppCompatActivity, val binding: ActivityStep1Binding) : Step1ListView {
+class Step2ListViewImpl(activity: AppCompatActivity, val binding: ActivityStep2Binding) : Step2ListView {
 
     init {
         with(activity) {

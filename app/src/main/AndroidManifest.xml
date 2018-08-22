@@ -20,9 +20,20 @@
             android:name=".feature.step1.list.Step1ListActivity"
             android:label="@string/title_activity_step1"
             android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name=".feature.step1.detail.Step1DetailActivity"
             android:label="@string/title_activity_step1"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".feature.step2.list.Step2ListActivity"
+            android:label="@string/title_activity_step2"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".feature.step2.detail.Step2DetailActivity"
+            android:label="@string/title_activity_step2"
             android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
