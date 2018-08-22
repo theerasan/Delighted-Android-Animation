@@ -9,7 +9,7 @@ interface MainView {
     fun setItems(items: List<StepItem>?)
 }
 
-class MainViewImpl(val binding: ActivityMainBinding) : MainView {
+class MainViewImpl(private val binding: ActivityMainBinding) : MainView {
 
     init {
         with(binding.mainList) {

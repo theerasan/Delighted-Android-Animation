@@ -40,7 +40,7 @@ class StepViewHolder(itemView: View, private val itemClick: SingleLiveEvent<Step
     fun bind(item: StepItem) {
         binding.item = item
         binding.root.setOnAnimateClickListener(R.id.banner) {
-            itemClick?.value  = item
+            itemClick?.postValue(item)
         }
     }
 }
