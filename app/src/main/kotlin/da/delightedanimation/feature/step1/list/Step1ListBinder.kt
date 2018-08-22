@@ -13,7 +13,7 @@ interface Step1ListBinder {
 class Step1ListBinderImpl(activity: AppCompatActivity, binding: ActivityStep1Binding) : Step1ListBinder {
 
     private val viewModel by lazy { activity.viewModel { Step1ListViewModel(activity) } }
-    private val view: Step1ListView by lazy { Step1ListViewImpl(binding) }
+    private val view: Step1ListView by lazy { Step1ListViewImpl(activity, binding) }
     private val router: Step1ListRouter by lazy { Step1ListRouterImpl(activity) }
 
     init {

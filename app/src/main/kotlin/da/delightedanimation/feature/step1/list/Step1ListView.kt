@@ -1,5 +1,6 @@
 package da.delightedanimation.feature.step1.list
 
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import da.delightedanimation.databinding.ActivityStep1Binding
 import da.delightedanimation.feature.cat.CatAdapter
@@ -9,9 +10,15 @@ interface Step1ListView {
     fun setItems(items: List<CatItem>?)
 }
 
-class Step1ListViewImpl(val binding: ActivityStep1Binding) : Step1ListView {
+class Step1ListViewImpl(activity: AppCompatActivity, val binding: ActivityStep1Binding) : Step1ListView {
 
     init {
+        with(activity) {
+            setSupportActionBar(binding.toolbar)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setDisplayShowHomeEnabled(true)
+        }
+
         with(binding.catList) {
             setHasFixedSize(false)
             isNestedScrollingEnabled = false

@@ -24,4 +24,9 @@ class Step1ListActivity : AppCompatActivity() {
         binder = Step1ListBinderImpl(this, binding)
         binder.bindTo(this)
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 }
