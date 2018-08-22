@@ -35,6 +35,16 @@
             android:name=".feature.step2.detail.Step2DetailActivity"
             android:label="@string/title_activity_step2"
             android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".feature.step3.list.Step3ListActivity"
+            android:label="@string/title_activity_step3"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".feature.step3.detail.Step3DetailActivity"
+            android:label="@string/title_activity_step3"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

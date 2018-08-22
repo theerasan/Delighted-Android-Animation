@@ -2,4 +2,7 @@
     <string name="app_name">Delighted Animation</string>
     <string name="title_activity_step1">Step - 01</string>
     <string name="title_activity_step2">Step - 02</string>
+    <string name="title_activity_step3">Step - 03</string>
+    <string name="cat_banner">cat_banner</string>
+    <string name="cat_name">cat_name</string>
 </resources>

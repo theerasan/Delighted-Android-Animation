@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="item"
+            type="da.delightedanimation.feature.cat.CatItem" />
+
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".feature.step1.list.Step1ListActivity">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:elevation="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:transitionName="@string/cat_banner"
+                    app:imageResource="@{item.imageRes}"
+                    tools:ignore="UnusedAttribute"
+                    tools:src="@drawable/cat_004" />
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/cat_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@drawable/toolbar_gradient"
+                    app:popupTheme="@style/AppTheme.PopupOverlay"
+                    app:title=" " />
+
+            </RelativeLayout>
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/gap_xlarge"
+                    android:text="@{item.name}"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/detail_title"
+                    android:textStyle="bold"
+                    android:transitionName="@string/cat_name"
+                    tools:ignore="UnusedAttribute"
+                    tools:text="Snoopy bob tail" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/gap_xlarge"
+                    android:layout_marginEnd="@dimen/gap_xlarge"
+                    android:layout_marginStart="@dimen/gap_xlarge"
+                    android:lineSpacingExtra="@dimen/line_height"
+                    android:text="@{item.detail}"
+                    android:textColor="#08090a"
+                    android:textSize="@dimen/normal_text"
+                    tools:text="Snoopy bob tail\nSnoopy bob tail Snoopy bob tail Snoopy bob tail tail tail tail" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</layout>
