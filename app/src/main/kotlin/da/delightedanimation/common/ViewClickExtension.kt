@@ -10,13 +10,7 @@ fun View.setOnAnimateClickListener(onClick: (View) -> Unit) {
     this.setOnAnimateClickListener(null, onClick)
 }
 
-fun View.setOnAnimateClickListener(resId: Int?, onClick: (View) -> Unit) {
-
-    var secondaryView: View? = null
-
-    if (resId != null) {
-        secondaryView = this.findViewById(resId)
-    }
+fun View.setOnAnimateClickListener(secondaryView: View?, onClick: (View) -> Unit) {
 
     this.setOnClickListener { view ->
         Handler().postDelayed({

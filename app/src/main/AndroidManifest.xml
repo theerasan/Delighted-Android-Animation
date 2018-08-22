@@ -56,6 +56,16 @@
             android:label="@string/title_activity_step4"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity
+            android:name=".feature.step5.list.Step5ListActivity"
+            android:label="@string/title_activity_step5"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".feature.step5.detail.Step5DetailActivity"
+            android:label="@string/title_activity_step5"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
     </application>
 
 </manifest>

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="da.delightedanimation.feature.step4.list.Step4ListViewModel"/>
+            type="da.delightedanimation.feature.step5.list.Step5ListViewModel"/>
     </data>
 <android.support.design.widget.CoordinatorLayout
     android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:title="@string/title_activity_step4"
+            app:title="@string/title_activity_step5"
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
