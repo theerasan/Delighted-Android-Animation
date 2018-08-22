@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import da.delightedanimation.R
 import da.delightedanimation.databinding.ActivityStep1Binding
 
+// Step - 01
 class Step1ListActivity : AppCompatActivity() {
     companion object {
         fun route(context: Context) {
