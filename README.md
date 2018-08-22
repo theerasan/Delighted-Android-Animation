@@ -21,5 +21,7 @@ In the code use "Repository - mix pattern" architecture, for more information, y
 ## Download the demo app
 If you would like to explore the app please feel free to [downlad](https://goo.gl/eCKcGx)
 
+## Screenshot
+![](https://github.com/theerasan/Delighted-Android-Animation/blob/master/apk/exanple.gif?raw=true)
 ## Disclaimer
 This code is not a perfect example of a kickstart. It still needs to add some linter, DI, rules, and tools to keep code quality. But you still can follow the example about the animation.
