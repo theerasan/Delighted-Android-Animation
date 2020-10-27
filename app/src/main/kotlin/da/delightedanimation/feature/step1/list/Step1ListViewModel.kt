@@ -1,7 +1,7 @@
 package da.delightedanimation.feature.step1.list
 
-import android.arch.lifecycle.ViewModel
 import android.content.Context
+import androidx.lifecycle.ViewModel
 import da.delightedanimation.common.SingleLiveEvent
 import da.delightedanimation.feature.cat.CatItem
 import da.delightedanimation.feature.cat.CatRepository

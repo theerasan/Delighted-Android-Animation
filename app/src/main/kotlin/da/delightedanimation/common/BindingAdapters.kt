@@ -1,7 +1,8 @@
 package da.delightedanimation.common
 
-import android.databinding.BindingAdapter
+
 import android.widget.ImageView
+import androidx.databinding.BindingAdapter
 
 @BindingAdapter("imageResource")
 fun setImageResource(imageView: ImageView, imageResource: Int) {

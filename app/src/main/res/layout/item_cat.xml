@@ -10,7 +10,7 @@
             type="da.delightedanimation.feature.cat.CatItem" />
     </data>
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/gap_xlarge"
@@ -40,6 +40,6 @@
             android:layout_gravity="bottom"
             android:layout_height="wrap_content" />
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 </layout>

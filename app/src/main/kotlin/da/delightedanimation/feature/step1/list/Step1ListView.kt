@@ -1,7 +1,7 @@
 package da.delightedanimation.feature.step1.list
 
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import da.delightedanimation.databinding.ActivityStep1Binding
 import da.delightedanimation.feature.cat.CatAdapter
 import da.delightedanimation.feature.cat.CatItem

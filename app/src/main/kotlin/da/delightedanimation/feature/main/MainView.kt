@@ -1,6 +1,6 @@
 package da.delightedanimation.feature.main
 
-import android.support.v7.widget.LinearLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import da.delightedanimation.databinding.ActivityMainBinding
 import da.delightedanimation.feature.main.step.StepAdapter
 import da.delightedanimation.feature.main.step.StepItem

@@ -1,8 +1,8 @@
 package da.delightedanimation.feature.cat
 
-import android.arch.lifecycle.LiveData
-import android.arch.lifecycle.MutableLiveData
 import android.content.Context
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import da.delightedanimation.R
 
 interface CatRepository {

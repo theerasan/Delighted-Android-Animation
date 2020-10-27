@@ -2,9 +2,9 @@ package da.delightedanimation.feature.step1.detail
 
 import android.content.Context
 import android.content.Intent
-import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import da.delightedanimation.R
 import da.delightedanimation.databinding.ActivityStep1DetailBinding
 import da.delightedanimation.feature.cat.CatItem

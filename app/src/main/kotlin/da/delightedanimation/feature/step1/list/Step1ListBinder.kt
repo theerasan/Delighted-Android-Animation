@@ -1,8 +1,9 @@
 package da.delightedanimation.feature.step1.list
 
-import android.arch.lifecycle.LifecycleOwner
-import android.arch.lifecycle.Observer
-import android.support.v7.app.AppCompatActivity
+
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.Observer
 import da.delightedanimation.common.viewModel
 import da.delightedanimation.databinding.ActivityStep1Binding
 
@@ -12,7 +13,7 @@ interface Step1ListBinder {
 
 class Step1ListBinderImpl(activity: AppCompatActivity, binding: ActivityStep1Binding) : Step1ListBinder {
 
-    private val viewModel by lazy { activity.viewModel { Step1ListViewModel(activity) } }
+    private val viewModel = Step1ListViewModel(activity)
     private val view: Step1ListView by lazy { Step1ListViewImpl(activity, binding) }
     private val router: Step1ListRouter by lazy { Step1ListRouterImpl(activity) }
 
