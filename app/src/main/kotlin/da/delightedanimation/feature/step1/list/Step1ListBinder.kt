@@ -4,7 +4,6 @@ package da.delightedanimation.feature.step1.list
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import da.delightedanimation.common.viewModel
 import da.delightedanimation.databinding.ActivityStep1Binding
 
 interface Step1ListBinder {

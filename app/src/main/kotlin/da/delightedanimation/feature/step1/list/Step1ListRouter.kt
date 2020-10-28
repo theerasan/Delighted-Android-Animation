@@ -1,15 +1,15 @@
 package da.delightedanimation.feature.step1.list
 
-import android.content.Context
-import da.delightedanimation.feature.cat.CatItem
+import android.app.Activity
+import da.delightedanimation.common.CatClickEvent
 import da.delightedanimation.feature.step1.detail.Step1DetailActivity
 
 interface Step1ListRouter {
-    fun gotoDetail(item: CatItem?)
+    fun gotoDetail(item: CatClickEvent)
 }
 
-class Step1ListRouterImpl(val context: Context): Step1ListRouter {
-    override fun gotoDetail(item: CatItem?) {
-        Step1DetailActivity.route(context, item)
+class Step1ListRouterImpl(private val activity: Activity): Step1ListRouter {
+    override fun gotoDetail(item: CatClickEvent) {
+        Step1DetailActivity.route(activity, item)
     }
 }

@@ -42,13 +42,15 @@
                         app:popupTheme="@style/AppTheme.PopupOverlay"
                         app:title=" " />
                 </com.google.android.material.appbar.AppBarLayout>
-                
+
                 <ImageView
                     android:id="@+id/banner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
+                    android:transitionName="@string/cat_banner"
                     app:imageResource="@{item.imageRes}"
+                    tools:ignore="UnusedAttribute"
                     tools:src="@drawable/cat_004" />
 
                 <TextView
@@ -59,6 +61,8 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="@dimen/detail_title"
                     android:textStyle="bold"
+                    android:transitionName="@string/cat_name"
+                    tools:targetApi="lollipop"
                     tools:text="Snoopy bob tail" />
 
                 <TextView

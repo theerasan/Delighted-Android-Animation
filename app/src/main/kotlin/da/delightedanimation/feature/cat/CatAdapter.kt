@@ -1,14 +1,17 @@
 package da.delightedanimation.feature.cat
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import da.delightedanimation.R
+import da.delightedanimation.common.CatClickEvent
 import da.delightedanimation.common.SingleLiveEvent
 import da.delightedanimation.databinding.ItemCatBinding
 
-class CatAdapter(private val itemClick: SingleLiveEvent<CatItem>?) : RecyclerView.Adapter<CatViewHolder>() {
+class CatAdapter(private val itemClick: SingleLiveEvent<CatClickEvent>?) :
+    RecyclerView.Adapter<CatViewHolder>() {
 
     var items: List<CatItem> = emptyList()
         set(value) {
@@ -34,12 +37,13 @@ class CatAdapter(private val itemClick: SingleLiveEvent<CatItem>?) : RecyclerVie
     override fun getItemId(position: Int): Long = items[position].imageRes.toLong()
 }
 
-class CatViewHolder(itemView: View, private val itemClick: SingleLiveEvent<CatItem>?): RecyclerView.ViewHolder(itemView) {
+class CatViewHolder(itemView: View, private val itemClick: SingleLiveEvent<CatClickEvent>?) :
+    RecyclerView.ViewHolder(itemView) {
     private val binding: ItemCatBinding = DataBindingUtil.bind(itemView)!!
     fun bind(item: CatItem) {
         binding.item = item
         binding.root.setOnClickListener {
-            itemClick?.postValue(item)
+            itemClick?.postValue(CatClickEvent(binding.banner, binding.name, item))
         }
     }
 }
