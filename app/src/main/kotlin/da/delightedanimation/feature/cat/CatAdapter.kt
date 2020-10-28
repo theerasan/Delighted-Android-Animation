@@ -1,6 +1,11 @@
 package da.delightedanimation.feature.cat
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
+import android.os.Handler
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
@@ -42,8 +47,74 @@ class CatViewHolder(itemView: View, private val itemClick: SingleLiveEvent<CatCl
     private val binding: ItemCatBinding = DataBindingUtil.bind(itemView)!!
     fun bind(item: CatItem) {
         binding.item = item
-        binding.root.setOnClickListener {
+        setOnAnimateClickListener(binding.root) {
             itemClick?.postValue(CatClickEvent(binding.banner, binding.name, item))
         }
     }
+
+    @SuppressLint("ClickableViewAccessibility")
+    private fun setOnAnimateClickListener(root: View, onClick: (View) -> Unit?) {
+
+        root.setOnClickListener { view ->
+            Handler().postDelayed({
+                onClick.invoke(view)
+            }, 400)
+        }
+
+        root.setOnTouchListener { v, event ->
+            when (event.action) {
+                MotionEvent.ACTION_DOWN -> {
+                    v.animate().cancel()
+                    v.animate().scaleY(0.96f)
+                        .scaleX(0.96f)
+                        .setDuration(200)
+                        .start()
+                    false
+                }
+                MotionEvent.ACTION_UP -> {
+                    val xBigScale = ObjectAnimator.ofFloat(v, "scaleX", 1.03f)
+                    xBigScale.setDuration(160).repeatCount = 0
+
+                    val yBigScale = ObjectAnimator.ofFloat(v, "scaleY", 1.03f)
+                    yBigScale.setDuration(160).repeatCount = 0
+
+                    val xSmallScale = ObjectAnimator.ofFloat(v, "scaleX", 0.985f)
+                    xSmallScale.setDuration(140).repeatCount = 0
+
+                    val ySmallScale = ObjectAnimator.ofFloat(v, "scaleY", 0.985f)
+                    ySmallScale.setDuration(140).repeatCount = 0
+
+                    val xNormalScale = ObjectAnimator.ofFloat(v, "scaleX", 1f)
+                    xNormalScale.setDuration(70).repeatCount = 0
+
+                    val yNormalScale = ObjectAnimator.ofFloat(v, "scaleY", 1f)
+                    yNormalScale.setDuration(70).repeatCount = 0
+
+                    val animateSet = AnimatorSet()
+                    animateSet.play(xBigScale).with(yBigScale)
+                    animateSet.play(xSmallScale).after(xBigScale)
+                    animateSet.play(ySmallScale).after(yBigScale)
+                    animateSet.play(xNormalScale).after(xSmallScale)
+                    animateSet.play(yNormalScale).after(ySmallScale)
+                    animateSet.start()
+
+                    false
+
+                }
+                MotionEvent.ACTION_CANCEL -> {
+                    v.animate()
+                        .scaleY(1f)
+                        .scaleX(1f)
+                        .setDuration(200)
+                        .start()
+
+                    true
+                }
+                else -> {
+                    true
+                }
+            }
+        }
+    }
+
 }
